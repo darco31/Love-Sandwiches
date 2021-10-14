@@ -121,13 +121,17 @@ def calculate_stock_data(data):
     
     return new_stock_data
 
-# def get_stock_values(data):
-#     """
-#     Receives the headings from the worksheet
-#     """
-#     headings = 
+def get_stock_values(data):
+    """
+    Receives the headings from the worksheet
+    """
+    headings = []
 
-#     worksheet_to_update = SHEET.worksheet(worksheet)
+    for head in data:
+        
+        stock_heading.append(headings)
+    
+    print(headings)
 
 def main():
     """
@@ -143,4 +147,5 @@ def main():
     update_worksheet(stock_data, "stock")
 
 print("Welcome to Love Sandwiches data automation\n")
-main()
+# main()
+get_stock_values(stock_heading)
