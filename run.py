@@ -121,7 +121,13 @@ def calculate_stock_data(data):
     
     return new_stock_data
 
+# def get_stock_values(data):
+#     """
+#     Receives the headings from the worksheet
+#     """
+#     headings = 
 
+#     worksheet_to_update = SHEET.worksheet(worksheet)
 
 def main():
     """
