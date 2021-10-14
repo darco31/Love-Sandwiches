@@ -121,17 +121,6 @@ def calculate_stock_data(data):
     
     return new_stock_data
 
-def get_stock_values(data):
-    """
-    Receives the headings from the worksheet
-    """
-    headings = []
-
-    for head in data:
-        
-        stock_heading.append(headings)
-    
-    print(headings)
 
 def main():
     """
@@ -147,5 +136,21 @@ def main():
     update_worksheet(stock_data, "stock")
 
 print("Welcome to Love Sandwiches data automation\n")
-# main()
-get_stock_values(stock_heading)
+main()
+
+
+def calculate_stock_data(data):
+    """
+    Calculate the average stock for each item type, adding 10%.
+    """
+    print("Calculating stock data...\n")
+    new_stock_data = []
+
+    for column in data:
+        int_column = [int(num) for num in column]
+
+        average = sum(int_column) / len(int_column)
+        stock_num = average * 1.1
+        new_stock_data.append(round(stock_num))
+
+    return new_stock_data
